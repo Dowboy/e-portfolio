@@ -63,7 +63,7 @@ section {
 .title {
   font-size: 96px;
   margin-bottom: 12px;
-  text-align: left;
+  text-align: center;
   line-height: 1;
 }
 
@@ -112,7 +112,7 @@ label {
 input,
 textarea {
   width: 100%;
-  background-color: #242424;
+  background-color: #0C0C0C;
   color: #fff;
   outline: none;
   border: 3px solid #c0c4cc;
@@ -171,11 +171,11 @@ header,
 }
 
 .dark-theme section {
-  background-color: #242424;
+  background-color: #0C0C0C;
 }
 
 .dark-theme #about-me {
-  background-color: #202020;
+  background-color: #101010;
 }
 
 .dark-theme #personal-logo {
@@ -192,7 +192,11 @@ header,
 
 .dark-theme .mail__btn {
   background-color: white;
-  color: #242424;
+  color: #0C0C0C;
+}
+
+.dark-theme .header__contact {
+  border: 2px solid #fff;
 }
 
 .dark-theme .link__hover-effect--black:after {
@@ -216,23 +220,35 @@ header {
 }
 
 .header__para {
-  font-size: 24px;
+  font-size: 32px;
+  margin-bottom: 12px;
+  text-align: center;
   line-height: 1.75;
-  max-width: 450px;
 }
 
 .header__contact {
+  font-weight: bold;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 12px auto;
+  font-size: 20px;
+  padding: 10px 14px;
+  border-radius: 4px;
   transition: all 300ms ease;
+  background-color: #a60000;
+  color: #fff;
+  border: 2px solid #101010;
 }
 
 .header__contact:hover {
-  color: rgb(80%, 0%, 0%);
+  background-color: rgb(80%, 0%, 0%);
   cursor: pointer;
 }
 
 .social__list {
   margin-top: 16px;
   display: flex;
+  justify-content: center;
 }
 
 .social__link {
@@ -259,7 +275,7 @@ header {
   font-size: 32px;
   border-radius: 50%;
   border: none;
-  background-color: #242424;
+  background-color: #101010;
   color: white;
   position: fixed;
   z-index: 1000;
@@ -333,7 +349,7 @@ nav {
 .nav__link--anchor {
   text-decoration: none;
   font-size: 16px;
-  color: #242424;
+  color: #101010;
   font-weight: 700;
 }
 
@@ -421,7 +437,7 @@ nav {
 }
 
 .modal__contact {
-  background-color: #242424;
+  background-color: #101010;
   color: white;
   transform: translateX(110%);
 }
@@ -479,7 +495,7 @@ nav {
 }
 
 .modal__overlay--loading {
-  background-color: #242424;
+  background-color: #101010;
   font-size: 80px;
 }
 
@@ -712,7 +728,7 @@ nav {
 /* FOOTER */
 
 footer {
-  background-color: #242424;
+  background-color: #101010;
   display: flex;
   padding: 6% 0;
   position: relative;
@@ -813,6 +829,10 @@ footer {
   .header__para {
     font-size: 20px;
   }
+  .header__contact {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
 
   .about__me--skills {
     justify-content: center;
@@ -878,12 +898,17 @@ footer {
 
 /* small phones */
 
-@media (max-width: 520px) {
+@media (max-width: 540px) {
   .title {
     font-size: 52px;
   }
   .header__para {
     font-size: 18px;
+  }
+  .header__contact {
+    font-size: 14px;
+    padding: 4px 6px;
+    max-width: 150px;
   }
   .nav__link:first-child {
     display: none;
@@ -898,8 +923,14 @@ footer {
   .about__me--para {
     font-size: 14px;
   }
+  .about__me--info {
+    padding: 0px;
+  }
   .skill__name {
     font-size: 12px;
+  }
+  .skill__img--wrapper {
+    padding: 12px 0px;
   }
 
   .section__title {
